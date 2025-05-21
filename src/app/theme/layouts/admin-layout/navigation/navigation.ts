@@ -7,15 +7,11 @@ export interface NavigationItem {
   hidden?: boolean;
   url?: string;
   classes?: string;
-  groupClasses?: string;
   exactMatch?: boolean;
   external?: boolean;
   target?: boolean;
   breadcrumbs?: boolean;
   children?: NavigationItem[];
-  link?: string;
-  description?: string;
-  path?: string;
 }
 
 export const NavigationItems: NavigationItem[] = [
@@ -29,8 +25,7 @@ export const NavigationItems: NavigationItem[] = [
         id: 'default',
         title: 'Vue générale',
         type: 'item',
-        classes: 'nav-item',
-        url: '/dashboard/default',
+        url: '/dashboard',
         icon: 'dashboard',
         breadcrumbs: false
       }
@@ -46,7 +41,6 @@ export const NavigationItems: NavigationItem[] = [
         id: 'active',
         title: 'Processus actifs',
         type: 'item',
-        classes: 'nav-item',
         url: '/processes/active',
         icon: 'play-circle',
         breadcrumbs: false
@@ -55,7 +49,6 @@ export const NavigationItems: NavigationItem[] = [
         id: 'abandoned',
         title: 'Processus abandonnés',
         type: 'item',
-        classes: 'nav-item', 
         url: '/processes/abandoned',
         icon: 'warning',
         breadcrumbs: false
@@ -72,7 +65,6 @@ export const NavigationItems: NavigationItem[] = [
         id: 'impact',
         title: 'Impact BD',
         type: 'item',
-        classes: 'nav-item',
         url: '/analysis/impact',
         icon: 'database',
         breadcrumbs: false
@@ -81,9 +73,24 @@ export const NavigationItems: NavigationItem[] = [
         id: 'performance',
         title: 'Performance',
         type: 'item',
-        classes: 'nav-item',
         url: '/analysis/performance',
         icon: 'line-chart',
+        breadcrumbs: false
+      }
+    ]
+  },
+  {
+    id: 'database',
+    title: 'Base de données',
+    type: 'group',
+    icon: 'icon-navigation',
+    children: [
+      {
+        id: 'monitoring',
+        title: 'Monitoring',
+        type: 'item',
+        url: '/database',
+        icon: 'monitor',
         breadcrumbs: false
       }
     ]
@@ -98,7 +105,6 @@ export const NavigationItems: NavigationItem[] = [
         id: 'users',
         title: 'Utilisateurs',
         type: 'item',
-        classes: 'nav-item',
         url: '/admin/users',
         icon: 'user',
         breadcrumbs: false
@@ -107,7 +113,6 @@ export const NavigationItems: NavigationItem[] = [
         id: 'settings',
         title: 'Paramètres',
         type: 'item',
-        classes: 'nav-item',
         url: '/admin/settings',
         icon: 'setting',
         breadcrumbs: false
