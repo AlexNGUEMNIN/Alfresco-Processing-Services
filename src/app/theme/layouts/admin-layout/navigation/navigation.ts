@@ -21,13 +21,13 @@ export interface NavigationItem {
 export const NavigationItems: NavigationItem[] = [
   {
     id: 'dashboard',
-    title: 'Dashboard',
+    title: 'Tableau de bord',
     type: 'group',
-    icon: 'icon-navigation',
+    icon: 'dashboard',
     children: [
       {
         id: 'default',
-        title: 'Default',
+        title: 'Vue générale',
         type: 'item',
         classes: 'nav-item',
         url: '/dashboard/default',
@@ -37,91 +37,80 @@ export const NavigationItems: NavigationItem[] = [
     ]
   },
   {
-    id: 'authentication',
-    title: 'Authentication',
+    id: 'processes',
+    title: 'Processus',
     type: 'group',
     icon: 'icon-navigation',
     children: [
       {
-        id: 'login',
-        title: 'Login',
+        id: 'active',
+        title: 'Processus actifs',
         type: 'item',
         classes: 'nav-item',
-        url: '/login',
-        icon: 'login',
-        target: true,
+        url: '/processes/active',
+        icon: 'play-circle',
         breadcrumbs: false
       },
       {
-        id: 'register',
-        title: 'Register',
+        id: 'abandoned',
+        title: 'Processus abandonnés',
         type: 'item',
-        classes: 'nav-item',
-        url: '/register',
-        icon: 'profile',
-        target: true,
+        classes: 'nav-item', 
+        url: '/processes/abandoned',
+        icon: 'warning',
         breadcrumbs: false
       }
     ]
   },
   {
-    id: 'utilities',
-    title: 'UI Components',
+    id: 'analysis',
+    title: 'Analyse',
     type: 'group',
     icon: 'icon-navigation',
     children: [
       {
-        id: 'typography',
-        title: 'Typography',
+        id: 'impact',
+        title: 'Impact BD',
         type: 'item',
         classes: 'nav-item',
-        url: '/typography',
-        icon: 'font-size'
+        url: '/analysis/impact',
+        icon: 'database',
+        breadcrumbs: false
       },
       {
-        id: 'color',
-        title: 'Colors',
+        id: 'performance',
+        title: 'Performance',
         type: 'item',
         classes: 'nav-item',
-        url: '/color',
-        icon: 'bg-colors'
-      },
-      {
-        id: 'tabler',
-        title: 'Tabler',
-        type: 'item',
-        classes: 'nav-item',
-        url: 'https://ant.design/components/icon',
-        icon: 'ant-design',
-        target: true,
-        external: true
+        url: '/analysis/performance',
+        icon: 'line-chart',
+        breadcrumbs: false
       }
     ]
   },
-
   {
-    id: 'other',
-    title: 'Other',
+    id: 'admin',
+    title: 'Administration',
     type: 'group',
     icon: 'icon-navigation',
     children: [
       {
-        id: 'sample-page',
-        title: 'Sample Page',
+        id: 'users',
+        title: 'Utilisateurs',
         type: 'item',
-        url: '/sample-page',
         classes: 'nav-item',
-        icon: 'chrome'
+        url: '/admin/users',
+        icon: 'user',
+        breadcrumbs: false
       },
       {
-        id: 'document',
-        title: 'Document',
+        id: 'settings',
+        title: 'Paramètres',
         type: 'item',
         classes: 'nav-item',
-        url: 'https://codedthemes.gitbook.io/mantis-angular/',
-        icon: 'question',
-        target: true,
-        external: true
+        url: '/admin/settings',
+        icon: 'setting',
+        breadcrumbs: false
       }
     ]
   }

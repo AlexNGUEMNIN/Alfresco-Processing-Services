@@ -21,16 +21,28 @@ const routes: Routes = [
         loadComponent: () => import('./demo/dashboard/default/default.component').then((c) => c.DefaultComponent)
       },
       {
-        path: 'typography',
-        loadComponent: () => import('./demo/component/basic-component/color/color.component').then((c) => c.ColorComponent)
+        path: 'processes/active',
+        loadComponent: () => import('./features/processes/active/active.component').then((c) => c.ActiveProcessesComponent)
       },
       {
-        path: 'color',
-        loadComponent: () => import('./demo/component/basic-component/typography/typography.component').then((c) => c.TypographyComponent)
+        path: 'processes/abandoned',
+        loadComponent: () => import('./features/processes/abandoned/abandoned.component').then((c) => c.AbandonedProcessesComponent)
       },
       {
-        path: 'sample-page',
-        loadComponent: () => import('./demo/others/sample-page/sample-page.component').then((c) => c.SamplePageComponent)
+        path: 'analysis/impact',
+        loadComponent: () => import('./features/analysis/impact/impact.component').then((c) => c.ImpactAnalysisComponent)
+      },
+      {
+        path: 'analysis/performance',
+        loadComponent: () => import('./features/analysis/performance/performance.component').then((c) => c.PerformanceAnalysisComponent)
+      },
+      {
+        path: 'admin/users',
+        loadComponent: () => import('./features/admin/users/users.component').then((c) => c.UsersComponent)
+      },
+      {
+        path: 'admin/settings',
+        loadComponent: () => import('./features/admin/settings/settings.component').then((c) => c.SettingsComponent)
       }
     ]
   },
