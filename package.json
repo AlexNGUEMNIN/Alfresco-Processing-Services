@@ -1,24 +1,24 @@
 {
-  "name": "mantis-free-angular-admin-template",
-  "version": "5.0.0",
-  "author": "CodedThemes",
+  "name": "aps-supervision-dashboard",
+  "version": "1.0.0",
+  "author": "Afriland First Bank",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-prod": "ng build --configuration production --base-href /angular/free/",
+    "build-prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "prettier": "prettier --write ./src"
   },
-  "private": false,
+  "private": true,
   "dependencies": {
     "@angular/animations": "19.0.5",
     "@angular/cdk": "19.0.4",
-    "@angular/common": "19.0.5",
+    "@angular/common": "19.0.5", 
     "@angular/compiler": "19.0.5",
     "@angular/core": "19.0.5",
     "@angular/forms": "19.0.5",
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "19.0.6",
     "@angular-eslint/builder": "19.0.2",
-    "@angular-eslint/eslint-plugin": "19.0.2",
+    "@angular-eslint/eslint-plugin": "19.0.2", 
     "@angular-eslint/eslint-plugin-template": "19.0.2",
     "@angular-eslint/schematics": "19.0.2",
     "@angular-eslint/template-parser": "19.0.2",
@@ -56,7 +56,7 @@
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.1",
-    "karma-jasmine": "~5.1.0",
+    "karma-jasmine": "~5.1.0", 
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "3.4.2",
     "typescript": "5.6.3"
